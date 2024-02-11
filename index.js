@@ -83,7 +83,8 @@ const jokes = [
     "Why was the coach yelling at the vending machine? He wanted his quarter back."
   ];
 
-  const trigger = document.getElementsByClassName("btn")[0];
+  const trigger = document.getElementsByClassName("crack-btn")[0];
+  const mode_switch = document.getElementsByClassName("dark-btn")[0];
   let joke_audio = new Audio('jokesound.mp3');
   const jokefunc = () => {
       const rand = Math.floor(Math.random() * jokes.length);
@@ -96,9 +97,25 @@ const jokes = [
         }
         synthesis.speak(utterance)
       }else{
-        alert("Text to speech isnt supported in your browser")
+        alert("Text to speech isnt supported in your browser");
       }
   };
+
+  const darkmd = ()=>{
+    document.getElementsByTagName("body")[0].classList.toggle('dark-mode');
+    document.getElementsByClassName("my-5")[0].classList.toggle('dark-mode-main');
+    document.getElementsByClassName('crack-btn')[0].classList.toggle('dark-mode-btn');
+    
+
+    if(document.getElementsByTagName("body")[0].classList.contains('dark-mode')){
+      document.getElementsByClassName("dm-logo")[0].style.fill = 'white'
+
+    }
+    else{
+      document.getElementsByClassName("dm-logo")[0].style.fill = 'black'
+    }
+
+  }
   
   trigger.onclick = function () {
       jokefunc();

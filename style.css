@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Joti+One&display=swap');
+   
+
 .container{
     display: flex;
     justify-content: center;
+    border-radius: 25px;
 }
 
+.dark-mode{
+    background-color: #05081c;
+    color: white;
+}
+
+.dark-mode-main{
+    background-color: #0a0d36;
+}
+
+.dark-mode-btn{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+h1{
+    font-family: 'Joti One', serif;
+    font-size: 70px;
+    font-weight: 30;
+}
